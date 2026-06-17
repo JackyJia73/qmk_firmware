@@ -1,16 +1,23 @@
 #pragma once
 //#define DEBUG_MATRIX_SCAN_RATE
 
-#define I2C_DRIVER	        I2CD1
-#define I2C1_SCL_PIN        B6
-#define I2C1_SCL_PAL_MODE	4
-#define I2C1_SDA_PIN        B7
-#define I2C1_SDA_PAL_MODE	4
-#define I2C1_TIMINGR_PRESC  5U
-#define I2C1_TIMINGR_SCLDEL 3U
-#define I2C1_TIMINGR_SDADEL 0U
-#define I2C1_TIMINGR_SCLH   10U
-#define I2C1_TIMINGR_SCLL   32U
+//#define NO_SUSPEND_POWER_DOWN
+
+#if defined(KP691001_ENABLE)
+    #define I2C_DRIVER	        I2CD1
+    #define I2C1_SCL_PIN        B6
+    #define I2C1_SCL_PAL_MODE	4
+    #define I2C1_SDA_PIN        B7
+    #define I2C1_SDA_PAL_MODE	4
+    #define I2C1_TIMINGR_PRESC  5U
+    #define I2C1_TIMINGR_SCLDEL 3U
+    #define I2C1_TIMINGR_SDADEL 0U
+    #define I2C1_TIMINGR_SCLH   10U
+    #define I2C1_TIMINGR_SCLL   32U
+
+    #define KP691001_FULL_PIN C6
+    #define kp691001_CHARGING_PIN B9
+#endif
 
 
 #if defined(RGB_MATRIX_ENABLE)
