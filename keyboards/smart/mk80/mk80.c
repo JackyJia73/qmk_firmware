@@ -128,7 +128,9 @@ uint32_t tt=0;
 bool rgb_matrix_indicators_kb(void) {
     if (timer_elapsed32(tt) > 1000) {
         tt = timer_read32();
-        uprintf("Battery level: %d%%\n\r", battery_get_percent());
+        //uprintf("Battery level: %d%%\n\r", battery_get_percent());
     }
+    rgb_matrix_set_color(USB_DRIVER.state,0,255,0);
+    //USB_DRIVER.state == USB_SUSPENDED
     return false;
 }

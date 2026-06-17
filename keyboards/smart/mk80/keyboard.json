@@ -22,7 +22,7 @@
         "encoder": true,
         "encoder_map": true,
         "os_detection": true,
-        "battery": true        
+        "battery": false        
     },
     "matrix_pins": {
         "cols": ["B0","C0","C1","C2","C3","B2","B4","B12","B13","F4","F5","F7","F6","C7","C8"],
@@ -39,7 +39,7 @@
         }
     },
     "battery": {
-        "driver": "adc",
+        "driver": "vendor",
         "adc":{
             "pin": "B1"
         },
